@@ -18,6 +18,16 @@
           <div class="tile" [class.winner]="winners.has(n)">{{ n }}</div>
         </mat-grid-tile>
       </mat-grid-list>
+
+      <div class="winners-section" *ngIf="winnersInOrder.length > 0">
+        <h3>Ganadores en orden de sorteo:</h3>
+        <mat-list>
+          <mat-list-item *ngFor="let winner of winnersInOrder; let i = index">
+            <span class="winner-number">{{ i + 1 }}.</span>
+            <span class="winner-value">Número {{ winner }}</span>
+          </mat-list-item>
+        </mat-list>
+      </div>
     </mat-card-content>
   </mat-card>
 </div>

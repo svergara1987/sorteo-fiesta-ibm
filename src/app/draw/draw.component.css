@@ -1,12 +1,12 @@
 .wrapper {
   min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  padding: 0;
 }
 
 .card {
-  width: min(1100px, 95vw);
+  width: 100%;
 }
 
 .legend {
@@ -47,4 +47,39 @@
   color: white;
   transform: scale(1.03);
   box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+}
+
+.winners-section {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.winners-section h3 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(0,0,0,0.87);
+}
+
+.winners-section mat-list {
+  padding-top: 0;
+}
+
+.winners-section mat-list-item {
+  height: auto;
+  min-height: 48px;
+  font-size: 16px;
+}
+
+.winner-number {
+  display: inline-block;
+  min-width: 32px;
+  font-weight: 600;
+  color: #ff4081;
+  margin-right: 8px;
+}
+
+.winner-value {
+  color: rgba(0,0,0,0.87);
 }

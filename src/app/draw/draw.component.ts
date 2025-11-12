@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatListModule } from '@angular/material/list';
 
 @Component({
   selector: 'app-draw',
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatGridListModule],
+  imports: [CommonModule, MatCardModule, MatGridListModule, MatListModule],
   templateUrl: 'draw.component.html',
   styleUrl: 'draw.component.css'
 })
@@ -19,6 +20,7 @@ export class DrawComponent implements OnInit, OnDestroy {
   premios = 0;
   numeros: number[] = [];
   winners = new Set<number>();
+  winnersInOrder: number[] = [];
 
   private timer: any;
   private intervalMs = 600;
@@ -67,6 +69,7 @@ export class DrawComponent implements OnInit, OnDestroy {
       const idx = Math.floor(Math.random() * remaining.length);
       const winner = remaining[idx];
       this.winners.add(winner);
+      this.winnersInOrder.push(winner);
     }, this.intervalMs);
   }
 
