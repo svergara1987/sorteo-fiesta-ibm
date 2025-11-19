@@ -22,6 +22,43 @@ export class DrawComponent implements OnInit, OnDestroy {
   winners = new Set<number>();
   winnersInOrder: number[] = [];
 
+  prizeNames: { [key: number]: string } = {
+    1: 'Look Style',
+    2: 'Vuelo en Parapente o Paratrike',
+    3: 'Relax',
+    4: '1000 Blue Points',
+    5: 'Bodega Cerro del Toro',
+    6: 'Estadía Boutique 2p',
+    7: 'Petit Gourmet',
+    8: 'Bodega Pizorno',
+    9: 'Relax',
+    10: 'Bodega Cerro del Toro',
+    11: 'TV - 50 pulgadas',
+    12: 'Look Style',
+    13: 'Vuelo en Parapente o Paratrike',
+    14: 'Petit Gourmet',
+    15: '1000 Blue Point',
+    16: 'Look Style',
+    17: 'Estadía Boutique 2p',
+    18: 'Petit Gourmet',
+    19: 'Relax',
+    20: 'Bodega Pizorno',
+    21: 'Bodega Cerro del Toro',
+    22: 'TV - 50 pulgadas',
+    23: 'Vuelo en Parapente o Paratrike',
+    24: 'Estadía Boutique 2p',
+    25: 'Petit Gourmet',
+    26: 'Bodega Cerro del Toro',
+    27: '1000 Blue Point',
+    28: 'Vuelo en Parapente o Paratrike',
+    29: 'Petit Gourmet',
+    30: 'Bodega Cerro del Toro',
+    31: 'Estadía Boutique 2p',
+    32: '1000 Blue Point',
+    33: 'Bodega Pizorno',
+    34: 'TV - 50 pulgadas'
+  };
+
   private timer: any;
   private intervalMs = 600;
 
